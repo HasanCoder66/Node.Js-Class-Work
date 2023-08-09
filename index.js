@@ -186,25 +186,68 @@
 
 
 
-const fs = require('fs');
-const http = require('http');
-const url = require('url');
-const port = 8000
+// const fs = require('fs');
+// const http = require('http');
+// const url = require('url');
+// const port = 8000
 
+
+// const server =  http.createServer((req , response)=>{
+//     const req_url_PathName = req.url;
+//     // console.log(req.url)
+//     if(req_url_PathName === '/' || req_url_PathName === '/home') {
+
+//         response.end('<h1>This is the home Page  </h1>')
+
+//     } else if (req_url_PathName === '/services'){
+        
+//         response.end('<h1>This is the service Page  </h1>')
+        
+//     }else {
+//         response.writeHead(404,{
+//             'content-type' : 'text/html',
+//             'my-work' : 'Hello World'
+//         });
+//         response.end('<h1>Page Not Found</h1>')
+//     }
+
+// });
+
+// server.listen(port,"127.0.0.1",()=>{
+//     console.log('Hello Server How are you Listen to requests on port 8000')
+// });
+
+
+
+
+
+
+
+
+import  fs  from 'fs';
+import  http from 'http';
+import  url  from 'url';
+const port =  8000
 
 const server =  http.createServer((req , response)=>{
     const req_url_PathName = req.url;
     // console.log(req.url)
     if(req_url_PathName === '/' || req_url_PathName === '/home') {
-
-        response.end('This is the home page')
-
+        
+        response.end('<h1>This is the home Page  </h1>')
+        
     } else if (req_url_PathName === '/services'){
-        response.end('This is the service Page')
-
-    }else {
-        response.writeHead(404);
-        response.end('Page Not Found')
+        
+        response.end('<h1>This is the service Page  </h1>')
+        
+    } 
+        
+    else {
+        response.writeHead(404,{
+            'content-type' : 'text/html',
+            'my-work' : 'Hello World'
+        });
+        response.end('<h1>Page Not Found</h1>')
     }
 
 });
