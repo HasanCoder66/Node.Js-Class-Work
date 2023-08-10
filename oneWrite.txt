@@ -1,1 +1,16 @@
-one text file working
+This file is working.
+
+I am Muhamamd Hasan Ashraf 
+basically i am learning web development
+From SMIT (saylaani mass it program),
+
+i have done these skills
+HTML 5
+CSS 3 
+JavaScript Es5 || Es6
+Bootstrap
+GitHub
+Firebase
+
+Recently i started Node.js and i am here to 
+show you my current working 
