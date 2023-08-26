@@ -1,4 +1,4 @@
-// import EventEmitter from 'events';
+import EventEmitter from 'events';
 
 // const myEmitter = new EventEmitter();
 
@@ -16,3 +16,6 @@
 
 // // myEmitter.emit('newSale')
 // myEmitter.emit('newSale', '40');
+
+
+

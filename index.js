@@ -1,7 +1,7 @@
-import  fs  from 'fs';
-import  http from 'http';
-import  url  from 'url';
-import EventEmitter from 'events';
+// import  fs  from 'fs';
+// import  http from 'http';
+// import  url  from 'url';
+// import EventEmitter from 'events';
 
 
 
@@ -11,6 +11,7 @@ import EventEmitter from 'events';
 // const myName = "Muhamamd ahsan"
 
 // console.log(myName)
+
 
 // Extra Work..... From Thapa technical
 
@@ -23,6 +24,42 @@ import EventEmitter from 'events';
 
 
 
+// const fs = require('fs')
+const http = require('http')
+const url = require('url')
+const port = 8000
+// const read = fs.readFile('./text/input.txt', 'utf-8', (err , data)=>{
+    
+//     console.log(data);   
+// })
+const server = http.createServer((req , res )=>{
+    const path = req.url
+
+    if(path === '/' || path === '/home'){
+      res.writeHead(200)  
+    res.end("this is the home page")
+
+    }else if(path === '/maha'){
+        res.end("this is the maha one ashhad")
+
+    }else{
+        res.writeHead(404, {
+            "content-type ": "text/html"
+        })
+        res.end("<h1> kuch sahi day</h1>")
+
+    }
+    // console.log();
+})
+
+server.listen( port , '127.0.0.1',()=>{
+    console.log(`my server is working on port ${port}`);
+} )
+
+// const text = ' hi maha ashhad tum aj kal full purity macha rahay ho'
+
+// fs.writeFileSync('./text/input.txt', text )
+// console.log('file has been written')
 
 // const fs = require('fs');
 // const bio = fs.readFileSync('./text/input.txt', 'utf-8');
